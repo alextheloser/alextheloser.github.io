@@ -1,8 +1,8 @@
 .lexend-<uniquifier> {
-  font-family: "Lexend", system-ui;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+	font-family: "Lexend", system-ui;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
 }
 
 .lineone{
@@ -40,10 +40,12 @@ body{
 	font-family: Lexend;
 	display: flex;
 	flex-direction: column;
-	margin-left: 145px;
-	margin-right: 145px;
-	margin-top: 75px;
 	color: #545760;
+	margin: 0;
+}
+
+body::-webkit-scrollbar { 
+	display: none; 
 }
 
 a{
@@ -63,6 +65,53 @@ a{
     margin-left: 36px;
 }
 */
+
+.containerSwitcher{
+	position: fixed;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 60px;
+	left: 0;
+	right: 0;
+	top: 0;
+	mask: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 66%, rgba(255,255,255,0) 100%);
+	backdrop-filter: blur(16px);
+}
+
+.switchTopic{
+	margin: auto;
+	width: fit-content;
+	display: flex;
+	border-radius: 15px;
+	background-color: rgb(255, 250, 248, 0.9);
+	padding: 5px;
+	font-size: 25px;
+	gap: 5px;
+}
+
+.switchTopic .topic{
+	min-width: 140px;
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	color: #BEC4D0;
+	transition: 0.2s;
+	cursor: pointer; 
+}
+
+
+.switchTopic .selected{
+	background-color: #FFCDBD;
+	color: #6E5750;
+}
+
+.switchTopic .topic:hover{
+	background-color: #FFCDBD;
+	color: #6E5750;
+	color: white;
+	cursor: pointer; 
+}
+
 .infocard .daticontainer .name{
 	font-weight: bold;
 	margin-top: 21px;
@@ -142,6 +191,19 @@ a{
 
 */
 @media only screen and (max-width: 990px) {
+
+	.containerSwitcher{
+		width: calc(100vw - 40px);
+	}
+
+	.contentSec{
+		box-sizing: border-box;
+		padding-top: calc(120px);
+		left: 0;
+		margin: auto;
+		scroll-padding: 0;
+	}
+
 	.lineone{
 		width: 20px;
 		height: 70%;
@@ -150,7 +212,7 @@ a{
 		bottom: 0;
 		background: linear-gradient(0deg, #D9E2FA 0%,  #FFCDBD 100%);
 		border-radius: 0px 90px 0px 0px;
-		}
+	}
 
 	.linetwo{
 		width: 20px;
@@ -168,89 +230,111 @@ a{
 		flex-direction: column;
 		margin-left: 25px;
 		margin-right: 25px;
-		margin-top: 75px;
+		/*margin-top: 75px;*/
 		color: #545760;
 		height: 100vh;
 		height: 100dvh;
 		overflow-y: scroll;
-	    scroll-snap-type: y proximity;
+		scroll-snap-type: y proximity;
 	}
 
 	.title{
 		scroll-snap-align: start;
 		margin-top: 16px;
-		margin-left: 28px;
+		/*margin-left: 28px;*/
 	}
 
 	.infocard{
-	    display: flex;
-	    flex-direction: column;
-	    margin: auto;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		/*margin-top: 100px;*/
 	}
 
 	.infocard .daticontainer {
-	    display: flex;
-	    flex-direction: column;
-	    align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: auto;
 	}
 
 	.infocard .links {
-	    margin-top: 14px;
-	    display: flex;
-	    flex-direction: column;
-	    align-items: flex-start;
+		margin-top: 14px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.infocard .image{
 		display: flex;
-    	justify-content: center;
+		justify-content: center;
 	}
 
-  	.sectioncontainer{
-		margin-top: 62px;
-	    display: flex;
-	    flex-wrap: nowrap;
-	    flex-direction: column;
-	    padding: 20px; 
-	    height: fit-content;
+	.sectioncontainer{
+		margin-bottom: 62px;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		padding: 20px; 
+		height: fit-content;
 	}
 
 	.sectioncontainer .section{
 		flex: 1;
-	    width: auto;
-	    display: flex;
-	    flex-wrap: wrap;
-	    flex-direction: column;
+		width: auto;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
 	}
 
 }
 
 @media only screen and (min-width: 991px) {
 
+	.containerSwitcher{
+		width: calc(100vw - 80px);
+	}
+
+	.contentSec{
+		box-sizing: border-box;
+		padding-top: calc(120px);
+		width: calc(100vw - 80px);
+		min-height: 100vh;
+		left: 0;
+		margin: auto;
+		padding-left: 145px;
+		padding-right: 145px;
+		scroll-padding: 0;
+	}
+
+
 	.infocard{
-	    display: flex;
-	    flex-direction: row;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 60px;
 	}
 
 	.infocard .daticontainer{
 		display: flex;
-	    flex-direction: column;
-	    margin-left: 36px;
+		flex-direction: column;
+		margin-left: 36px;
 	}
 
 	.sectioncontainer{
-		margin-top: 62px;
+		margin-bottom: 62px;
 		display: flex;
 		gap: 36px;
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	.sectioncontainer .section{
-		flex: 1 1 0px;
+		flex: 1 0 30%; 
 		width: 0;
-	    display: flex;
-	    flex-direction: column;
+		display: flex;
+		flex-direction: column;
 	}
+
 }
 
 
@@ -304,6 +388,61 @@ a{
 .sectioncontainer .section img{
 	width: 100%;
 	border-radius: 11px;
+}
+
+
+.overlayExpContainer{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(16px);
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgb(0,0,0,0.2);
+	transition: visibility 0.1s linear,opacity 0.1s linear;
+}
+
+.overlayExpContainer .experience{
+	width: 90vw;
+	height: 90vh;
+	background-color: white;
+	margin: auto;
+	margin-top: 5vh;
+	border-radius: 30px;
+	overflow-y: scroll;
+	-webkit-box-shadow: 0px 0px 30px -1px rgba(0,0,0,0.06); 
+	box-shadow: 0px 0px 30px -1px rgba(0,0,0,0.06);
+	box-sizing: border-box;
+	padding: 41px;
+
+}
+
+.overlayExpContainer .experience .controls{
+	width: 100%;
+	display: grid;
+}
+
+
+.overlayExpContainer .experience .controls .close{
+	width: 20px;
+	height: 20px;
+	justify-self: end;
+	left: 0;
+	top: 0px;
+	cursor: pointer; 
+}
+
+.overlayExpContainer .experience .containerExpJson{
+	width: 100%;
+	height: 20vh;
+	background-color: red;
+	margin-top: 41px;
+}
+
+.overlayExpContainer .experience::-webkit-scrollbar { 
+	display: none; 
 }
 
 

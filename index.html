@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<meta name="og:title" content="Alessio Largiu - Curriculum"/>
 	<meta name="og:image" content="http://https://alextheloser.github.io/fotoprofilo-compressed.png"/>
 	<meta property="og:image" content="http://https://alextheloser.github.io/fotoprofilo-compressed.png"/>
@@ -14,96 +15,238 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  	<link rel="stylesheet" href="style.css">
-  	<title> Alessio Largiu - CV </title>
+	<link rel="stylesheet" href="style.css">
+	<title> Alessio Largiu - CV </title>
 </head>
 <div class="lineone"></div>
 <div class="linetwo"></div>
-<div class="lang">
-	<a href="index_IT.html" > 🇮🇹 </a> 
-	<a href="index.html" > 🇬🇧 </a> 
-</div>
 <body>
 
-<div class="infocard">
-	<div class="image">
-		<img src="altpropic.png">
-	</div>
-	<div class="daticontainer">
-	<span class="name"> Alessio Largiu</span>
-	<span class="dati"> 18/08/2000 Cagliari, Italy </span>
-	<span class="dati"> alessiolargiu168@gmail.com </span>
-	<span class="dati"> (+39) 329 698 2968</span>
-	<div class="links">
-	<div class="sociallink">
-		<img src="github.png">
-		<span> <a href="https://github.com/alessiolargiu/"> @alessiolargiu </a> </span>
-	</div>
-	<div class="sociallink">
-		<img src="linkedin.png">
-		<span> <a href="https://www.linkedin.com/in/alessio-largiu-a9ba00195/"> Alessio Largiu </a> </span>
-	</div>
-	</div>
 
-	  <a href="CV.pdf" download="CV Alessio Largiu">
-        <button type="button">Download my CV</button>
-    </a>
-</div>
-</div>
-
-<div class="sectioncontainer">
-	<section class="section"  id="sec1">
-		<span class="title"> Software </span>
-		<div class="expcontainer">
-			<span class="date"> 2023 -> 2024 </span>
-			<p class="desc"><b class="job"> Adiacent Cagliari </b>
-				Full stack experience mainly focused on the front-end side.
-				Most of the project's I've worked on were based on <b>AEM Sites and AEM Forms</b>.
-
-				Test
-			</p>
-
-			<span class="date"> 2019 -> Today </span>
-			<p class="desc"><b class="job">Freelancing </b>
-				I have worked for several individuals and companies on various projects like:
-				<ul>
-				<li>Web Developing</li>
-				<li>Python Scripting</li>
-				<li>Arduino Programming</li>
-				<li>Browser Extensions</li>
-			</ul>
-			</p>
+	<div class="containerSwitcher">
+		<div class="switchTopic">
+			<div class="topic about selected" id="About"> About </div>
+			<div class="topic portfolio" id="Portfolio"> Portfolio </div>
 		</div>
-	</section>
-	<section class="section"  id="sec2">
-		<span class="title"> Design </span>
-		<div class="expcontainer alt">
-			<span class="date"> 2019 -> Today </span>
-			<p class="desc"><b class="job"> Freelancing </b>
-				I have worked (on commission) for a job market related start-up, creating the branding, design language and layout of their product and webpages.
-			</p>
+	</div>
 
-			<span class="date"> 2020 -> 2024 </span>
-			<p class="desc"><b class="job">University</b>
-				Creation of a mobile app for the Human-Machine Interaction course, focused on usability and graphical euristics.
+	<div class="contentSec" id="firstSection">
+		<div class="infocard">
+			<div class="image">
+				<img src="fotoprofilo.png">
+			</div>
+			<div class="daticontainer">
+				<span class="name"> Alessio Largiu</span>
+				<span class="dati"> 18/08/2000 Cagliari (Italy) </span>
+				<span class="dati"> alessiolargiu168@gmail.com </span>
+				<span class="dati"> (+39) 329 698 2968</span>
+				<div class="links">
+					<div class="sociallink">
+						<img src="github.png">
+						<span> <a href="https://github.com/alessiolargiu/"> @alessiolargiu </a> </span>
+					</div>
+					<div class="sociallink">
+						<img src="linkedin.png">
+						<span> <a href="https://www.linkedin.com/in/alessio-largiu-a9ba00195/"> Alessio Largiu </a> </span>
+					</div>
+				</div>
 
-				I have also worked on different projects focused on the creation of apps and websites and cure the design part of those projects.
-			</p>
+				<a href="CV.pdf" download="CV Alessio Largiu">
+					<button type="button">Download my CV</button>
+				</a>
+			</div>
 		</div>
-	</section>
-	<section class="section" id="sec3">
-		<span class="title"> Videogames </span>
-		<div class="expcontainer">
-			<span class="date"> 2020 -> 2024 </span>
-			<p class="desc"><b class="job"> University </b>
+
+		<div class="sectioncontainer">
+			<section class="section"  id="sec1">
+				<span class="title"> Software </span>
+				<div class="expcontainer">
+					<span class="date"> 2023 -> 2024 </span>
+					<p class="desc"><b class="job"> Adiacent Cagliari </b>
+						Full stack experience mainly focused on the front-end side.
+						Most of the project's I've worked on were based on <b>AEM Sites and AEM Forms</b>.
+					</p>
+
+					<span class="date"> 2019 -> Today </span>
+					<p class="desc"><b class="job">Freelancing </b>
+						I have worked for several individuals and companies on various projects like:
+						<ul>
+							<li>Web Developing</li>
+							<li>Python Scripting</li>
+							<li>Arduino Programming</li>
+							<li>Browser Extensions</li>
+						</ul>
+					</p>
+				</div>
+			</section>
+			<section class="section"  id="sec2">
+				<span class="title">UX/UI Design </span>
+				<div class="expcontainer alt">
+					<span class="date"> 2019 -> Today </span>
+					<p class="desc"><b class="job"> Freelancing </b>
+						I have worked, on commission for a job market related start-up, on the creation of branding, design language and layout of their product and webpages.
+					</p>
+
+					<span class="date"> 2020 -> 2024 </span>
+					<p class="desc"><b class="job">University</b>
+						Creation of a mobile app for the Human-Machine Interaction course, focused on usability and graphical euristics.
+
+						I have also worked on different projects focused on the creation of apps and websites and cure the design part of those projects.
+					</p>
+				</div>
+			</section>
+			<section class="section" id="sec3">
+				<span class="title"> Videogames </span>
+				<div class="expcontainer">
+					<span class="date"> 2020 -> 2024 </span>
+					<p class="desc"><b class="job"> University </b>
 						Creation of the Video Game Design project, creating an open world game from scratch using the Unity Engine, applying concepts of level design and 3D modelling.
-			</p>
+					</p>
 
-			<img src="kor.png">
+					<img src="kor.png">
+				</div>
+			</section>
 		</div>
-	</section>
-</div>
+	</div>
+
+	<div class="contentSec" id="secondSection">
+		<div class="sectioncontainer">
+			<section class="section"  id="sec1">
+				<span class="title"> eLearning</span>
+				<div class="expcontainer alt">
+					<p class="desc"><b class="job"> eLearning Unica (Concept) </b>
+						<button onclick="showOverLayWithTopic('elearning.json')">cici</button>
+					</p>
+				</div>
+			</section>
 
 
+
+		</div>
+
+	</div>
+
+	<div class="overlayExpContainer" id="overlayExpContainer">
+		
+		<div class="experience">
+
+			<div class="controls">
+				<svg class="close" id="close">
+					<path xmlns="http://www.w3.org/2000/svg" d="M0.798633 4.63887C-0.266211 3.58535 -0.266211 1.86348 0.798633 0.798633C1.85215 -0.266211 3.57402 -0.266211 4.63887 0.798633L9.96308 6.12285L15.2873 0.798633C16.3408 -0.266211 18.0627 -0.254883 19.1275 0.798633C20.1924 1.85215 20.1924 3.57402 19.1275 4.63887L13.8033 9.96308L19.1275 15.2873C20.1924 16.3408 20.1811 18.0627 19.1275 19.1275C18.074 20.1924 16.3521 20.1924 15.2873 19.1275L9.96308 13.8033L4.63887 19.1275C3.58535 20.1924 1.86348 20.1811 0.798633 19.1275C-0.266211 18.074 -0.266211 16.3521 0.798633 15.2873L6.12285 9.96308L0.798633 4.63887Z" fill="#6E5750"/>
+				</svg>
+			</div>
+
+
+			<div class="containerExpJson" id="containerExpJson">
+			</div>
+
+
+
+		</div>
+
+
+
+
+	</div>
 </body>
 </html>
+
+
+
+<script>
+
+
+	const about = document.getElementById("About");
+	const portfolio = document.getElementById("Portfolio");
+
+
+	$(document).ready(function(){
+		$("About").hide();
+		$("About").delay(1000).fadeOut(2000);
+	});
+	
+
+	const firstElement = document.getElementById("firstSection");
+	const secondElement = document.getElementById("secondSection");
+
+	/*
+	function switchSec(arg){
+
+		var scrollToElement = null;
+		var unselected = null;
+		var selected = null;
+
+		if(arg=="About"){
+
+			scrollToElement = firstElement;
+			unselected = portfolio;
+			selected = about;
+
+		} else if(arg=="Portfolio"){
+
+			scrollToElement = secondElement;
+			selected = portfolio;
+			unselected = about;
+
+		}
+
+		scrollToElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+		selected.classList.add("selected");
+		unselected.classList.remove("selected");
+	}
+
+	*/
+	$("#About").click(function(e) {
+
+		scrollToElement = firstElement;
+		unselected = portfolio;
+		selected = about;
+
+		scrollToElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+		selected.classList.add("selected");
+		unselected.classList.remove("selected");
+	});
+
+	$("#Portfolio").click(function(e) {
+
+		scrollToElement = secondElement;
+		selected = portfolio;
+		unselected = about;
+
+		scrollToElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+		selected.classList.add("selected");
+		unselected.classList.remove("selected");
+	});
+
+
+
+	$("#overlayExpContainer").click(function(e) {
+		$("#overlayExpContainer").css({"opacity":"0","visibility":"hidden"})
+	});
+
+	$("#close").click(function(e) {
+		$("#overlayExpContainer").css({"opacity":"0","visibility":"hidden"})
+	});
+
+	$("#overlayExpContainer div").click(function(e) {
+		e.stopPropagation();
+	});
+
+
+	function showOverLayWithTopic(json){
+		$("#overlayExpContainer").css({"visibility":"visible","opacity":"1"})
+
+		console.log(json);
+		$.getJSON('elearning.json', function(data){
+            console.log(data.experience)
+        }).fail(function(){
+            console.log("An error has occurred.");
+        });
+
+
+
+
+	}
+
+
+</script>

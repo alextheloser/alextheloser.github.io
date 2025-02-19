@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="lang">
+        <button onclick="switchLanguage('en')">🇬🇧</button>
+        <button onclick="switchLanguage('it')">🇮🇹</button>
+    </div>
+
+    <div class="infocard">
+        <div class="image">
+            <img id="profile-img" src="" alt="Profile Picture">
+        </div>
+        <div class="daticontainer">
+            <span id="name" class="name"></span>
+            <span id="dob" class="dati"></span>
+            <span id="location" class="dati"></span>
+            <span id="email" class="dati"></span>
+            <span id="phone" class="dati"></span>
+
+            <div class="sociallink">
+                <img src="github.png">
+                <span> <a href="https://github.com/alessiolargiu/"> @alessiolargiu </a> </span>
+            </div>
+            <div class="sociallink">
+                <img src="linkedin.png">
+                <span> <a href="https://www.linkedin.com/in/alessio-largiu-a9ba00195/"> Alessio Largiu </a> </span>
+            </div>
+    </div>
+
+        </div>
+    </div>
+    
+    <div class="sectioncontainer" id="sections">
+        
+    </div>
+</body>
+</html>
+
+<script>
+const cvData = {
+  "title": {
+    "en": "Alessio Largiu - CV",
+    "it": "Alessio Largiu - CV"
+  },
+  "meta": {
+    "en": {
+      "og:title": "Alessio Largiu - Curriculum",
+      "og:image": "fotoprofilo-compressed.png",
+      "og:site_name": "Alessio Largiu",
+      "og:description": "Hi, Welcome to my CV",
+      "viewport": "width=device-width,initial-scale=1"
+    },
+    "it": {
+      "og:title": "Alessio Largiu - Curriculum",
+      "og:image": "fotoprofilo-compressed.png",
+      "og:site_name": "Alessio Largiu",
+      "og:description": "Ciao, mi chiamo Alessio e questo è il mio CV",
+      "viewport": "width=device-width,initial-scale=1"
+    }
+  },
+  "fonts": [
+    "https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+  ],
+  "stylesheets": ["style.css"],
+  "languages": {
+    "italian": "index_it.html",
+    "english": "index.html"
+  },
+  "profile": {
+    "name": "Alessio Largiu",
+    "dob": "18/08/2000",
+    "location": {
+      "en": "Cagliari jsonen, Italy",
+      "it": "Cagliari jsonit, Italia"
+    },
+    "email": "alessiolargiu168@gmail.com",
+    "phone": "(+39) 329 698 2968",
+    "image": "fotoprofilo.png",
+    "social_links": {
+      "github": {
+        "username": "@alessiolargiu",
+        "url": "https://github.com/alessiolargiu/"
+      },
+      "linkedin": {
+        "name": "Alessio Largiu",
+        "url": "https://www.linkedin.com/in/alessio-largiu-a9ba00195/"
+      }
+    },
+    "cv_download": "CV.pdf"
+  },
+  "sections": [
+    {
+      "title": { "en": "Software", "it": "Software" },
+      "experiences": [
+        {
+          "date": "2023 -> 2024",
+          "job": { "en": "Adiacent Cagliari", "it": "Adiacent Cagliari" },
+          "description": {
+            "en": "Full stack experience mainly focused on the front-end side. Most of the projects I've worked on were based on AEM Sites and AEM Forms.",
+            "it": "Esperienza full stack principalmente focalizzata sul lato front-end. La maggior parte dei progetti su cui ho lavorato erano basati su AEM Sites e AEM Forms."
+          }
+        },
+        {
+          "date": "2019 -> Today",
+          "job": { "en": "Freelancing", "it": "Freelancing" },
+          "description": {
+            "en": "I have worked for several individuals and companies on various projects like:",
+            "it": "Ho lavorato per vari individui, aziende e privati, su progetti incentrati in ambienti diversi tra cui:"
+          },
+          "tasks": {
+            "en": ["Web Developing", "Python Scripting", "Arduino Programming", "Browser Extensions"],
+            "it": ["Programmazione Web", "Scripting Python", "Programmazione Arduino", "Estensioni per browser"]
+          }
+        }
+      ]
+    },
+    {
+      "title": { "en": "Design", "it": "Design" },
+      "experiences": [
+        {
+          "date": "2019 -> Today",
+          "job": { "en": "Freelancing", "it": "Freelancing" },
+          "description": {
+            "en": "I have worked (on commission) for a job market-related start-up, creating the branding, design language, and layout of their product and webpages.",
+            "it": "Ho lavorato su commissione per una start-up incentrata sul mercato del lavoro, dalla creazione di branding, design language al layout del loro prodotto e pagine web."
+          }
+        },
+        {
+          "date": "2020 -> 2024",
+          "job": { "en": "University", "it": "Università" },
+          "description": {
+            "en": "Creation of a mobile app for the Human-Machine Interaction course, focused on usability and graphical heuristics. I have also worked on different projects focused on the creation of apps and websites and handled the design part of those projects.",
+            "it": "Creazione progetto per il corso di Interazione Uomo-Macchina, focalizzato sugli studi di usabilità e euristiche grafiche. Inoltre all’università ho avuto modo di lavorare su diversi progetti incentrati sul creare applicativi e, di conseguenza è stato necessario curarne la parte grafica."
+          }
+        }
+      ]
+    },
+    {
+      "title": { "en": "Videogames", "it": "Videogames" },
+      "experiences": [
+        {
+          "date": "2020 -> 2024",
+          "job": { "en": "University", "it": "Università" },
+          "description": {
+            "en": "Creation of the Video Game Design project, creating an open-world game from scratch using the Unity Engine, applying concepts of level design and 3D modeling.",
+            "it": "Creazione progetto per il corso Video Game Design, incentrato sulla creazione, da zero, di un videogioco in Unity, applicando concetti di level-design e modellazione 3D."
+          },
+          "image": "kor.png"
+        }
+      ]
+    }
+  ]
+};
+
+switchLanguage('en');
+
+function switchLanguage(lang) {
+    document.getElementById('name').textContent = cvData.profile.name;
+    document.getElementById('dob').textContent = cvData.profile.dob;
+    document.getElementById('location').textContent = cvData.profile.location[lang];
+    document.getElementById('email').textContent = cvData.profile.email;
+    document.getElementById('phone').textContent = cvData.profile.phone;
+    document.getElementById('profile-img').src = cvData.profile.image;
+
+    let sectionsContainer = document.getElementById('sections');
+    sectionsContainer.innerHTML = '';
+    
+    cvData.sections.forEach(section => {
+        let sectionEl = document.createElement('section');
+        sectionEl.innerHTML = `<h2>${section.title[lang]}</h2>`;
+        section.experiences.forEach(exp => {
+            let expEl = document.createElement('div');
+            expEl.classList.add("section");
+            expEl.innerHTML = `
+                <h3>${exp.job[lang]}</h3>
+                <span>${exp.date}</span>
+                <p>${exp.description[lang]}</p>
+            `;
+            if (exp.tasks) {
+                let ul = document.createElement('ul');
+                exp.tasks[lang].forEach(task => {
+                    let li = document.createElement('li');
+                    li.textContent = task;
+                    ul.appendChild(li);
+                });
+                expEl.appendChild(ul);
+            }
+            if (exp.image) {
+                let img = document.createElement('img');
+                img.src = exp.image;
+                expEl.appendChild(img);
+            }
+            sectionEl.appendChild(expEl);
+        });
+        sectionsContainer.appendChild(sectionEl);
+    });
+}
+</script>
