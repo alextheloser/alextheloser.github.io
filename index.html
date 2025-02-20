@@ -111,11 +111,10 @@
 
 	<div class="contentSec" id="secondSection">
 		<div class="sectioncontainer">
-			<section class="section"  id="sec1">
+			<section class="section clickable"  id="sec1" onclick="showOverLayWithTopic('https://raw.githubusercontent.com/alessiolargiu/alessiolargiu.github.io/refs/heads/modifiche/elearning.json')">
 				<span class="title"> eLearning</span>
 				<div class="expcontainer alt">
-					<p class="desc"><b class="job"> eLearning Unica (Concept) </b>
-						<button onclick="showOverLayWithTopic('https://raw.githubusercontent.com/alessiolargiu/alessiolargiu.github.io/refs/heads/modifiche/elearning.json')">Se premi qua ti esce un overlay</button>
+					<p class="desc">The University of Cagliari has many things to be proud of, <b> their eLearning website isn't one of those things. </b><br> There are many usability flaws in its current <a href=\"https://www.elearning.unica.it\">elearning website</a> and in this concept I'm going to redesign the main issue: the dashboard.
 					</p>
 				</div>
 			</section>
@@ -237,16 +236,26 @@
 			$("#containerExpJson").append("<div class=\"title\">" + data.title + "</div>");
 
 			data.content.forEach(item => {
-	            let section = `
-	                <div class="subtitle">${item.subtitle}</div>
-	                <div class="text">${item.text}</div>
-	                <div class="image">
-	                    <img src="${item.image.src}" alt="Image">
-	                    <div class="label">${item.image.label}</div>
-	                </div>
-	            `;
-	            $("#containerExpJson").append(section);
-	        });
+
+				let section;
+
+				if(data.image.present=="yes"){
+					section = `
+					<div class="subtitle">${item.subtitle}</div>
+					<div class="text">${item.text}</div>
+					<div class="image">
+					<img src="${item.image.src}" alt="Image">
+					<div class="label">${item.image.label}</div>
+					</div>
+					`;
+				} else {
+					section = `
+					<div class="subtitle">${item.subtitle}</div>
+					<div class="text">${item.text}</div>
+					`;
+				}
+				$("#containerExpJson").append(section);
+			});
 
 
 

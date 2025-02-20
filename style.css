@@ -297,6 +297,7 @@ a{
 
 	}
 
+
 }
 
 @media only screen and (min-width: 991px) {
@@ -351,7 +352,9 @@ a{
 
 }
 
-
+.sectioncontainer .clickable{
+	cursor: pointer;
+}
 
 .sectioncontainer .section .title{
 	font-weight: bold;

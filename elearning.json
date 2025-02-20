@@ -1,26 +1,27 @@
 {
-  "title": "Titolo",
+  "title": "Redesign UX eLearning Unica (Concept)",
   "content": [
     {
-      "subtitle": "Sottotitolo",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "subtitle": "Why?",
+      "text": "The University of Cagliari has many things to be proud of, <b> their eLearning website isn't one of those things. </b>.\n<br> There are many usability flaws in its current <a href=\"https://www.elearning.unica.it\"> elearning website </a> and in this concept I'm going to redesign the main issues: the dashboard and the homepage.",
       "image": {
-        "src": "images/image.png",
-        "label": "Label for image"
+        "present": "no",
+      }
+    },
+    {
+      "subtitle": "The issues with the HomePage",
+      "text": "The University of Cagliari’s eLearning homepage is a maze of poor design choices. <b> Too many hamburger menus clutter the interface, making navigation confusing. </b> The first thing you see isn’t your courses—it’s a manual, as if the website expects you to struggle. Faculty buttons all look the same, distinguished only by random images with no clear labels. There are countless buttons with unclear functions, leaving users guessing. Worst of all, <b> the search bar—arguably the most important feature—is buried at the bottom of the page. </b>",
+      "image": {
+        "present": "yes",
+        "src": "images/home.png",
+        "label": "Immagine lunghissima, da fizare"
       }
     },
     {
       "subtitle": "Sottotitolo",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "image": {
-        "src": "images/image.png",
-        "label": "Label for image"
-      }
-    },
-    {
-      "subtitle": "Sottotitolo",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": {
+        "present": "yes",
         "src": "images/image.png",
         "label": "Label for image"
       }
