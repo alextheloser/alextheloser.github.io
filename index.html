@@ -232,10 +232,7 @@
 
 	function showOverLayWithTopic(json){
 		$("#overlayExpContainer").css({"visibility":"visible","opacity":"1"})
-
-		console.log(json);
 		$.getJSON(json, function(data){
-			console.log(data.title)
 
 			$("#containerExpJson").append("<div class=\"title\">" + data.title + "</div>");
 
@@ -248,7 +245,7 @@
 	                    <div class="label">${item.image.label}</div>
 	                </div>
 	            `;
-	            container.append(section);
+	            $("#containerExpJson").append(section);
 	        });
 
 
