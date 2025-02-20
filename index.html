@@ -115,7 +115,7 @@
 				<span class="title"> eLearning</span>
 				<div class="expcontainer alt">
 					<p class="desc"><b class="job"> eLearning Unica (Concept) </b>
-						<button onclick="showOverLayWithTopic('elearning.json')">Se premi qua ti esce un overlay</button>
+						<button onclick="showOverLayWithTopic('https://raw.githubusercontent.com/alessiolargiu/alessiolargiu.github.io/refs/heads/modifiche/elearning.json')">Se premi qua ti esce un overlay</button>
 					</p>
 				</div>
 			</section>
@@ -136,13 +136,8 @@
 				</svg>
 			</div>
 
-			Bellissimo
-
-
 			<div class="containerExpJson" id="containerExpJson">
 			</div>
-
-
 
 		</div>
 
@@ -223,11 +218,11 @@
 
 
 	$("#overlayExpContainer").click(function(e) {
-		$("#overlayExpContainer").css({"opacity":"0","visibility":"hidden"})
+		hideOverlayWithTopic();
 	});
 
 	$("#close").click(function(e) {
-		$("#overlayExpContainer").css({"opacity":"0","visibility":"hidden"})
+		hideOverlayWithTopic();
 	});
 
 	$("#overlayExpContainer div").click(function(e) {
@@ -239,15 +234,34 @@
 		$("#overlayExpContainer").css({"visibility":"visible","opacity":"1"})
 
 		console.log(json);
-		$.getJSON('elearning.json', function(data){
-            console.log(data.experience)
-        }).fail(function(){
-            console.log("An error has occurred.");
-        });
+		$.getJSON(json, function(data){
+			console.log(data.title)
+
+			$("#containerExpJson").append("<div class=\"title\">" + data.title + "</div>");
+
+			data.content.forEach(item => {
+	            let section = `
+	                <div class="subtitle">${item.subtitle}</div>
+	                <div class="text">${item.text}</div>
+	                <div class="image">
+	                    <img src="${item.image.src}" alt="Image">
+	                    <div class="label">${item.image.label}</div>
+	                </div>
+	            `;
+	            container.append(section);
+	        });
 
 
 
+		}).fail(function(){
+			console.log("Unreadable json");
+		});
+	}
 
+
+	function hideOverlayWithTopic(){
+		$("#containerExpJson").empty();
+		$("#overlayExpContainer").css({"opacity":"0","visibility":"hidden"})
 	}
 
 
