@@ -284,6 +284,7 @@ a{
 		height: fit-content;
 	}
 
+
 	.sectioncontainer .section{
 		flex: 1;
 		width: auto;
@@ -293,8 +294,22 @@ a{
 		align-items: center;
 	}
 
+
+	.sectioncontainer .section .expcontainer .cta{
+		display: flex;
+		width: auto !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+	}
+
+
 	.sectioncontainer .section .expcontainer {
 
+	}
+
+	.overlayExpContainer .experience .containerExpJson .image img{
+		width: 30vw;
+		margin-bottom: 12px;
 	}
 
 
@@ -350,6 +365,12 @@ a{
 		flex-direction: column;
 	}
 
+	.overlayExpContainer .experience .containerExpJson .image img{
+		max-width: 30vw;
+		max-height: 90vh;
+		margin-bottom: 12px;
+	}
+
 }
 
 .sectioncontainer .clickable{
@@ -371,6 +392,33 @@ a{
 	padding-right: 28px;
 	padding-top: 39px;
 	padding-bottom: 45px;
+}
+
+.sectioncontainer .section .expcontainer .cta{
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	margin-top: 14px;
+	padding: 14px;
+	border-radius: 23px;
+	border: none;
+	background-color: #FFCDBD;
+	color: #6E5750;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Lexend;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	-webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25); 
+	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.sectioncontainer .section .expcontainer .cta .icon{
+	width: 14px;
+	height: 14px;
+	color: white;
+	fill: #6E5750;
+	margin-left: 14px;
 }
 
 .sectioncontainer .section .expcontainer.alt{
@@ -466,13 +514,8 @@ a{
 .overlayExpContainer .experience .containerExpJson .image{
 	display: flex;
 	flex-direction: column;
-    align-items: center;
+	align-items: center;
 	margin-bottom: 30px;
-}
-
-.overlayExpContainer .experience .containerExpJson .image img{
-	width: 30vw;
-	margin-bottom: 12px;
 }
 
 .overlayExpContainer .experience .containerExpJson .image .label{
@@ -493,6 +536,13 @@ a{
 	left: 0;
 	top: 0px;
 	cursor: pointer; 
+	margin-top: 14px;
+	padding: 14px;
+	border-radius: 23px;
+	border: none;
+	background-color: #FFCDBD;
+	color: #6E5750;
+
 }
 
 .overlayExpContainer .experience .containerExpJson{

@@ -33,7 +33,7 @@
 	<div class="contentSec" id="firstSection">
 		<div class="infocard">
 			<div class="image">
-				<img src="fotoprofilo.png">
+				<img src="fotoprofilo-compressed.png">
 			</div>
 			<div class="daticontainer">
 				<span class="name"> Alessio Largiu</span>
@@ -111,11 +111,13 @@
 
 	<div class="contentSec" id="secondSection">
 		<div class="sectioncontainer">
-			<section class="section clickable"  id="sec1" onclick="showOverLayWithTopic('https://raw.githubusercontent.com/alessiolargiu/alessiolargiu.github.io/refs/heads/modifiche/elearning.json')">
+			<section class="section"  id="sec1">
 				<span class="title"> eLearning</span>
 				<div class="expcontainer alt">
 					<p class="desc">The University of Cagliari has many things to be proud of, <b> their eLearning website isn't one of those things. </b><br> There are many usability flaws in its current <a href="https://elearning.unica.it">elearning website</a> and in this concept I'm going to redesign the main issue: the dashboard.
 					</p>
+
+					<div class="cta clickable" onclick="showOverLayWithTopic('https://raw.githubusercontent.com/alessiolargiu/alessiolargiu.github.io/refs/heads/modifiche/elearning.json')">  Read more <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"/></svg> </div>
 				</div>
 			</section>
 
@@ -237,10 +239,21 @@
 
 			data.content.forEach(item => {
 
-				let section;
+				/*
+				let section = `
+	                <div class="subtitle">${item.subtitle}</div>
+	                <div class="text">${item.text}</div>
+	                <div class="image">
+	                <p>${item.image.present}" </p>
+	                    <img src="${item.image.src}" alt="Image">
+	                    <div class="label">${item.image.label}</div>
+	                </div>
+	            `;*/
 
-				console.log(data.image.present);
-				if(data.image.present=="yes"){
+				/*console.log(data.image);*/
+				let section;
+				let imagePresent = item.image.present;
+				if(imagePresent=="yes"){
 					section = `
 					<div class="subtitle">${item.subtitle}</div>
 					<div class="text">${item.text}</div>
@@ -255,6 +268,7 @@
 					<div class="text">${item.text}</div>
 					`;
 				}
+				
 				$("#containerExpJson").append(section);
 			});
 
