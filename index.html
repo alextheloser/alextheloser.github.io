@@ -198,13 +198,13 @@
 			$("#Portfolio")[0].classList.remove("selected");
 		}
 
-		if ($('#CVpt').isInViewport() && !$('#infopt').isInViewport()) {
+		if ($('#CVpt').isInViewport() && (!$('#infopt').isInViewport()) || !$('#CVpt').isInViewport()) {
 			$("#CV")[0].classList.add("selected");
 			$("#Portfolio")[0].classList.remove("selected");
 			$("#About")[0].classList.remove("selected");
 		}
 
-		if ($('#portpt').isInViewport() && !$('#CVpt').isInViewport()) {
+		if ($('#portpt').isInViewport() && (!$('#CVpt').isInViewport() || !$('#infopt').isInViewport())) {
 			$("#Portfolio")[0].classList.add("selected");
 			$("#CV")[0].classList.remove("selected");
 			$("#About")[0].classList.remove("selected");
