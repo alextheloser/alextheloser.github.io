@@ -19,45 +19,48 @@
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	<title> Alessio Largiu - CV </title>
 </head>
-<div class="lineone"></div>
-<div class="linetwo"></div>
+<div class="lineone" id="lineone"></div>
+<div class="linetwo" id="linetwo"></div>
 <body>
 
 
-	<div class="containerSwitcher">
+	<div class="containerSwitcher" id="containerSwitcher">
 		<div class="switchTopic">
 			<div class="topic about selected" id="About"> About </div>
+			<div class="topic about" id="CV"> CV </div>
 			<div class="topic portfolio" id="Portfolio"> Portfolio </div>
 		</div>
 	</div>
 
-	<div class="contentSec" id="firstSection">
-		<div class="infocard">
-			<div class="image">
-				<img src="fotoprofilo-compressed.png">
-			</div>
-			<div class="daticontainer">
-				<span class="name"> Alessio Largiu</span>
-				<span class="dati"> 18/08/2000 Cagliari (Italy) </span>
-				<span class="dati"> alessiolargiu168@gmail.com </span>
-				<span class="dati"> (+39) 329 698 2968</span>
-				<div class="links">
-					<div class="sociallink">
-						<img src="github.png">
-						<span> <a href="https://github.com/alessiolargiu/"> @alessiolargiu </a> </span>
-					</div>
-					<div class="sociallink">
-						<img src="linkedin.png">
-						<span> <a href="https://www.linkedin.com/in/alessio-largiu-a9ba00195/"> Alessio Largiu </a> </span>
-					</div>
-				</div>
-
-				<a href="CV.pdf" download="CV Alessio Largiu">
-					<button type="button">Download my CV</button>
-				</a>
-			</div>
+	<div class="infocard" id="InfocardSEC">
+		<span id="infopt"></span>
+		<div class="image">
+			<img src="fotoprofilo-compressed.png">
 		</div>
+		<div class="daticontainer" id="ciaui">
+			<span class="name"> Alessio Largiu</span>
+			<span class="dati"> 18/08/2000 Cagliari (Italy) </span>
+			<span class="dati"> alessiolargiu168@gmail.com </span>
+			<span class="dati"> (+39) 329 698 2968</span>
+			<div class="links">
+				<div class="sociallink">
+					<img src="github.png">
+					<span> <a href="https://github.com/alessiolargiu/"> @alessiolargiu </a> </span>
+				</div>
+				<div class="sociallink">
+					<img src="linkedin.png">
+					<span> <a href="https://www.linkedin.com/in/alessio-largiu-a9ba00195/"> Alessio Largiu </a> </span>
+				</div>
+			</div>
 
+			<a href="CV.pdf" download="CV Alessio Largiu">
+				<button type="button">Download my CV</button>
+			</a>
+		</div>
+	</div>
+
+	<div class="contentSec" id="CVSEC">
+		<span id="CVpt"></span>
 		<div class="sectioncontainer">
 			<section class="section"  id="sec1">
 				<span class="title"> Software </span>
@@ -110,7 +113,8 @@
 		</div>
 	</div>
 
-	<div class="contentSec" id="secondSection">
+	<div class="contentSec" id="PortfolioSEC">
+		<span id="portpt"></span>
 		<div class="sectioncontainer">
 			<section class="section"  id="sec1">
 				<span class="title"> eLearning</span>
@@ -155,66 +159,58 @@
 <script>
 
 
-	const about = document.getElementById("About");
-	const portfolio = document.getElementById("Portfolio");
-
 
 	$(document).ready(function(){
 		$("About").hide();
 		$("About").delay(1000).fadeOut(2000);
 	});
+
+	let heightSwitchBar = $("#containerSwitcher").height() +40;
+	console.log(heightSwitchBar);
+
+	$("<style type='text/css'> @media only screen and (max-width: 990px) { .adjustMarginMobile{ margin-bottom: " + heightSwitchBar + "px} }</style>").appendTo("head");
+	$("#lineone").addClass("adjustMarginMobile");
+
 	
-
-	const firstElement = document.getElementById("firstSection");
-	const secondElement = document.getElementById("secondSection");
-
-	/*
-	function switchSec(arg){
-
-		var scrollToElement = null;
-		var unselected = null;
-		var selected = null;
-
-		if(arg=="About"){
-
-			scrollToElement = firstElement;
-			unselected = portfolio;
-			selected = about;
-
-		} else if(arg=="Portfolio"){
-
-			scrollToElement = secondElement;
-			selected = portfolio;
-			unselected = about;
-
-		}
-
-		scrollToElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-		selected.classList.add("selected");
-		unselected.classList.remove("selected");
-	}
-
-	*/
 	$("#About").click(function(e) {
+		$("#InfocardSEC")[0].scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+		$("#About")[0].classList.add("selected");
+		$("#CV")[0].classList.remove("selected");
+		$("#Portfolio")[0].classList.remove("selected");
+	});
 
-		scrollToElement = firstElement;
-		unselected = portfolio;
-		selected = about;
-
-		scrollToElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-		selected.classList.add("selected");
-		unselected.classList.remove("selected");
+	$("#CV").click(function(e) {
+		$("#CVSEC")[0].scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+		$("#CV")[0].classList.add("selected");
+		$("#Portfolio")[0].classList.remove("selected");
+		$("#About")[0].classList.remove("selected");
 	});
 
 	$("#Portfolio").click(function(e) {
+		$("#PortfolioSEC")[0].scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+		$("#Portfolio")[0].classList.add("selected");
+		$("#CV")[0].classList.remove("selected");
+		$("#About")[0].classList.remove("selected");
+	});
 
-		scrollToElement = secondElement;
-		selected = portfolio;
-		unselected = about;
+	$(window).scroll(function() {
+		if ($('#infopt').isInViewport()) {
+			$("#About")[0].classList.add("selected");
+			$("#CV")[0].classList.remove("selected");
+			$("#Portfolio")[0].classList.remove("selected");
+		}
 
-		scrollToElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-		selected.classList.add("selected");
-		unselected.classList.remove("selected");
+		if ($('#CVpt').isInViewport() && !$('#infopt').isInViewport()) {
+			$("#CV")[0].classList.add("selected");
+			$("#Portfolio")[0].classList.remove("selected");
+			$("#About")[0].classList.remove("selected");
+		}
+
+		if ($('#portpt').isInViewport() && !$('#CVpt').isInViewport()) {
+			$("#Portfolio")[0].classList.add("selected");
+			$("#CV")[0].classList.remove("selected");
+			$("#About")[0].classList.remove("selected");
+		}
 	});
 
 
@@ -285,6 +281,18 @@
 		$("#containerExpJson").empty();
 		$("#overlayExpContainer").css({"opacity":"0","visibility":"hidden"})
 	}
+
+	$.fn.isInViewport = function () {
+		let elementTop = $(this).offset().top;
+		let elementBottom = elementTop + $(this).outerHeight();
+
+		let viewportTop = $(window).scrollTop();
+		let viewportBottom = viewportTop + window.innerHeight;
+
+		return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+
+
 
 
 </script>

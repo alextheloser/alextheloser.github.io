@@ -42,6 +42,7 @@ body{
 	flex-direction: column;
 	color: #545760;
 	margin: 0;
+	overscroll-behavior: contain;
 }
 
 body::-webkit-scrollbar { 
@@ -66,24 +67,13 @@ a{
 }
 */
 
-.containerSwitcher{
-	position: fixed;
-	margin: 0 auto;
-	padding-top: 20px;
-	padding-bottom: 60px;
-	left: 0;
-	right: 0;
-	top: 0;
-	mask: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 66%, rgba(255,255,255,0) 100%);
-	backdrop-filter: blur(16px);
-}
 
 .switchTopic{
 	margin: auto;
 	width: fit-content;
 	display: flex;
 	border-radius: 15px;
-	background-color: rgb(255, 250, 248, 0.9);
+	background-color: rgb(255, 250, 248, 1);
 	padding: 5px;
 	font-size: 25px;
 	gap: 5px;
@@ -192,11 +182,24 @@ a{
 @media only screen and (max-width: 990px) {
 
 	.containerSwitcher{
-		width: calc(100vw - 40px);
+		position: fixed;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgb(255, 250, 248, 1);
+	}
+
+	.containerSwitcher .switchTopic{
+		flex-wrap: wrap;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 
 	.containerSwitcher .switchTopic .topic{
-		min-width: 110px;
+		flex: 1 0 30%;
 		padding: 5px;
 	}
 
@@ -236,10 +239,9 @@ a{
 		margin-right: 25px;
 		/*margin-top: 75px;*/
 		color: #545760;
-		height: 100vh;
-		height: 100dvh;
 		overflow-y: scroll;
 		scroll-snap-type: y proximity;
+		padding-bottom: 30vh;
 	}
 
 	.title{
@@ -252,14 +254,18 @@ a{
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		/*margin-top: 100px;*/
+		height: 100vh;
+		padding: 0;
+		box-sizing: border-box;
+		padding-bottom: 20vh;
+		margin: 0;
+		justify-content: center;
 	}
 
 	.infocard .daticontainer {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin: auto;
 		align-items: center;
 	}
 
@@ -312,10 +318,28 @@ a{
 		margin-bottom: 12px;
 	}
 
+	.contentSec{
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+
 
 }
 
 @media only screen and (min-width: 991px) {
+
+
+	.containerSwitcher{
+		position: fixed;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		left: 0;
+		width: 100%;
+		right: 0;
+		top: 0;
+	}
+
 
 	.containerSwitcher{
 		width: calc(100vw - 80px);
@@ -331,16 +355,19 @@ a{
 		width: calc(100vw - 80px);
 		min-height: 100vh;
 		left: 0;
-		margin: auto;
 		padding-left: 145px;
-		padding-right: 145px;
 		scroll-padding: 0;
 	}
 
 
 	.infocard{
+		width: calc(100vw - 80px);
+		padding-left: 145px;
+        padding-right: 145px;
+        padding-top: 145px;
 		display: flex;
 		flex-direction: row;
+		margin: auto;
 		margin-bottom: 60px;
 	}
 
@@ -546,7 +573,7 @@ a{
 
 .overlayExpContainer .experience .containerExpJson{
 	width: 100%;
-    height: 85%;
+	height: 85%;
 	margin-top: 41px;
 	overflow-y: scroll;
 }
