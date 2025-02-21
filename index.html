@@ -164,7 +164,6 @@
 	});
 
 	let heightSwitchBar = $("#containerSwitcher").height() +40;
-	console.log(heightSwitchBar);
 
 	$("<style type='text/css'> @media only screen and (max-width: 990px) { .adjustMarginLinea{ margin-bottom: " + heightSwitchBar + "px} .adjustMarginInfoBar{ padding-bottom: calc(20vh + " + heightSwitchBar +"px);} }</style>").appendTo("head");
 
@@ -192,13 +191,13 @@
 	});
 
 	$(window).scroll(function() {
-		if ($('#infopt').isInViewport()) {
+		if ($('#infopt').isInViewport() && (!$('#CVpt').isInViewport() || !$('#portpt').isInViewport())) {
 			$("#About")[0].classList.add("selected");
 			$("#CV")[0].classList.remove("selected");
 			$("#Portfolio")[0].classList.remove("selected");
 		}
 
-		if ($('#CVpt').isInViewport() && (!$('#infopt').isInViewport()) || !$('#CVpt').isInViewport()) {
+		if ($('#CVpt').isInViewport() && (!$('#infopt').isInViewport() || !$('#CVpt').isInViewport())) {
 			$("#CV")[0].classList.add("selected");
 			$("#Portfolio")[0].classList.remove("selected");
 			$("#About")[0].classList.remove("selected");
