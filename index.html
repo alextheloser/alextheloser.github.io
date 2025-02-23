@@ -28,7 +28,7 @@
 		<div class="switchTopic">
 			<div class="topic about selected" id="About"> About </div>
 			<div class="topic about" id="CV"> CV </div>
-			<div class="topic portfolio" id="Portfolio"> Portfolio </div>
+			<!--<div class="topic portfolio" id="Portfolio"> Portfolio </div>-->
 		</div>
 	</div>
 
@@ -113,6 +113,7 @@
 		</div>
 	</div>
 
+<!--
 	<div class="contentSec" id="PortfolioSEC">
 		<span id="portpt"></span>
 		<div class="sectioncontainer">
@@ -122,7 +123,7 @@
 					<p class="desc">The University of Cagliari has many things to be proud of, <b> their eLearning website isn't one of those things. </b><br> There are many usability flaws in its current <a href="https://elearning.unica.it">elearning website</a> and in this concept I'm going to redesign the main issue: the dashboard.
 					</p>
 
-					<div class="cta clickable" onclick="showOverLayWithTopic('https://raw.githubusercontent.com/alessiolargiu/alessiolargiu.github.io/refs/heads/main/elearning.json')">  Read more <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"/></svg> </div>
+					<div class="cta clickable" onclick="showOverLayWithTopic('https://raw.githubusercontent.com/alessiolargiu/alessiolargiu.github.io/refs/heads/main/elearning.json')">  Read more <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"/></svg> </div>
 				</div>
 			</section>
 
@@ -149,6 +150,8 @@
 
 
 	</div>
+
+-->
 </body>
 </html>
 
@@ -173,44 +176,50 @@
 		$("#InfocardSEC")[0].scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 		$("#About")[0].classList.add("selected");
 		$("#CV")[0].classList.remove("selected");
-		$("#Portfolio")[0].classList.remove("selected");
+		//$("#Portfolio")[0].classList.remove("selected");
 	});
 
 	$("#CV").click(function(e) {
 		$("#CVSEC")[0].scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 		$("#CV")[0].classList.add("selected");
-		$("#Portfolio")[0].classList.remove("selected");
+		//$("#Portfolio")[0].classList.remove("selected");
 		$("#About")[0].classList.remove("selected");
 	});
 
+	/*
 	$("#Portfolio").click(function(e) {
 		$("#PortfolioSEC")[0].scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 		$("#Portfolio")[0].classList.add("selected");
 		$("#CV")[0].classList.remove("selected");
 		$("#About")[0].classList.remove("selected");
 	});
+	*/
 
 	$(window).scroll(function() {
-		if ($('#infopt').isInViewport() && (!$('#CVpt').isInViewport() || !$('#portpt').isInViewport())) {
+		if ($('#infopt').isInViewport() && (!$('#CVpt').isInViewport() /*|| !$('#portpt').isInViewport()*/)) {
 			$("#About")[0].classList.add("selected");
 			$("#CV")[0].classList.remove("selected");
-			$("#Portfolio")[0].classList.remove("selected");
+			//$("#Portfolio")[0].classList.remove("selected");
 		}
 
-		if ($('#CVpt').isInViewport() && (!$('#infopt').isInViewport() || !$('#CVpt').isInViewport())) {
+		if ($('#CVpt').isInViewport() && (!$('#infopt').isInViewport()/* || !$('#portpt').isInViewport()*/)) {
 			$("#CV")[0].classList.add("selected");
-			$("#Portfolio")[0].classList.remove("selected");
+			//$("#Portfolio")[0].classList.remove("selected");
 			$("#About")[0].classList.remove("selected");
 		}
 
+		/*
+
 		if ($('#portpt').isInViewport() && (!$('#CVpt').isInViewport() || !$('#infopt').isInViewport())) {
-			$("#Portfolio")[0].classList.add("selected");
+			//$("#Portfolio")[0].classList.add("selected");
 			$("#CV")[0].classList.remove("selected");
 			$("#About")[0].classList.remove("selected");
 		}
+		*/
 	});
 
 
+	/*
 
 	$("#overlayExpContainer").click(function(e) {
 		hideOverlayWithTopic();
@@ -277,6 +286,7 @@
 		$("#containerExpJson").empty();
 		$("#overlayExpContainer").css({"opacity":"0","visibility":"hidden"})
 	}
+	*/
 
 	$.fn.isInViewport = function () {
 		let elementTop = $(this).offset().top;
