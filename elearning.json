@@ -14,7 +14,7 @@
       "subtitle": "The issues with the HomePage",
       "text": "The University of Cagliari’s eLearning homepage is a maze of poor design choices. <b> Too many hamburger menus clutter the interface, making navigation confusing. </b> The first thing you see isn’t your courses—it’s a manual, as if the website expects you to struggle. Faculty buttons all look the same, distinguished only by random images with no clear labels. There are countless buttons with unclear functions, leaving users guessing. Worst of all, <b> the search bar—arguably the most important feature—is buried at the bottom of the page. </b>",
       "media": {
-        "format": "img",
+        "format": "image",
         "src": "images/home.png",
         "label": "Immagine lunghissima, da fixare"
       }
