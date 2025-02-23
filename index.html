@@ -233,13 +233,25 @@
 
 			data.content.forEach(item => {
 				let section;
-				let imagePresent = item.image.present;
-				if(imagePresent=="yes"){
+				let imageFormat = item.media.format;
+				if(imageFormat=="image"){
 					section = `
 					<div class="subtitle">${item.subtitle}</div>
 					<div class="text">${item.text}</div>
-					<div class="image">
-					<img src="${item.image.src}" alt="Image">
+					<div class="media">
+					<img src="${item.media.src}" alt="Image">
+					<div class="label">${item.media.label}</div>
+					</div>
+					`;
+				} if(imagePresent=="video"){
+					section = `
+					<div class="subtitle">${item.subtitle}</div>
+					<div class="text">${item.text}</div>
+					<div class="media">
+						<video width="320" height="240" controls>
+							<source src="${item.media.src}" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 					<div class="label">${item.image.label}</div>
 					</div>
 					`;

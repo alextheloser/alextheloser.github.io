@@ -537,14 +537,14 @@ a{
 	font-weight: normal;
 }
 
-.overlayExpContainer .experience .containerExpJson .image{
+.overlayExpContainer .experience .containerExpJson .media{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 30px;
 }
 
-.overlayExpContainer .experience .containerExpJson .image .label{
+.overlayExpContainer .experience .containerExpJson .media .label{
 	font-weight: 200;
 	font-style: italic;
 }
