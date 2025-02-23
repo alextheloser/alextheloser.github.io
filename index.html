@@ -37,7 +37,7 @@
 		<div class="image">
 			<img src="fotoprofilo-compressed.png">
 		</div>
-		<div class="daticontainer" id="ciaui">
+		<div class="daticontainer">
 			<span class="name"> Alessio Largiu</span>
 			<span class="dati"> Cagliari (Italy) </span>
 			<span class="dati"> alessiolargiu168@gmail.com </span>
@@ -235,21 +235,21 @@
 				let section;
 				let imageFormat = item.media.format;
 				if(imageFormat=="image"){
-					console.log("ciaooo");
 					section = `
 					<div class="subtitle">${item.subtitle}</div>
 					<div class="text">${item.text}</div>
 					<div class="media">
-					<img src="${item.media.src}" alt="Image">
+					dd
+					<img src="${item.media.src}" class="mediact" alt="Image">
 					<div class="label">${item.media.label}</div>
 					</div>
 					`;
-				} if(imageFormat=="video"){
+				} else if(imageFormat=="video"){
 					section = `
 					<div class="subtitle">${item.subtitle}</div>
 					<div class="text">${item.text}</div>
 					<div class="media">
-						<video width="320" height="240" controls>
+						<video class="mediact" autoplay="autoplay" loop>
 							<source src="${item.media.src}" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>

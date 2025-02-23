@@ -324,6 +324,13 @@ a{
 		padding-bottom: 60px;
 	}
 
+	.overlayExpContainer .experience .containerExpJson .mediact{
+		width: 70vw;
+		height: 70vw;
+		border-radius: 20px;
+		object-fit: cover;
+	}
+
 
 }
 
@@ -364,7 +371,7 @@ a{
 	.infocard{
 		width: calc(100vw - 80px);
 		padding-left: 145px;
-        padding-top: 145px;
+		padding-top: 145px;
 		display: flex;
 		flex-direction: row;
 		margin: auto;
@@ -392,11 +399,14 @@ a{
 		flex-direction: column;
 	}
 
-	.overlayExpContainer .experience .containerExpJson .image img{
-		max-width: 30vw;
-		max-height: 90vh;
-		margin-bottom: 12px;
+	
+	.overlayExpContainer .experience .containerExpJson .mediact{
+		width: 30vw;
+		height: 30vw;
+		object-fit: cover;
+		border-radius: 20px;
 	}
+
 
 }
 
@@ -542,6 +552,9 @@ a{
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 30px;
+}
+
+.overlayExpContainer .experience .containerExpJson .mediact{
 }
 
 .overlayExpContainer .experience .containerExpJson .media .label{
