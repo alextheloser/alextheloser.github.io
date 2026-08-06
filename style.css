@@ -1,7 +1,7 @@
-.lexend-<uniquifier> {
+.lexend-heading {
 	font-family: "Lexend", system-ui;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	font-weight: 900;
 	font-style: normal;
 }
 
@@ -40,7 +40,7 @@ body{
 	font-family: Lexend;
 	display: flex;
 	flex-direction: column;
-	color: ##31324D;
+	color: #31324D;
 	margin: 0;
 	overscroll-behavior: contain;
 }
@@ -239,7 +239,7 @@ a{
 		margin-left: 25px;
 		margin-right: 25px;
 		/*margin-top: 75px;*/
-		color: ##31324D;
+		color: #31324D;
 		overflow-y: scroll;
 		scroll-snap-type: y proximity;
 		padding-bottom: 30vh;
