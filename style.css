@@ -11,7 +11,7 @@
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	background: linear-gradient(0deg, #D9E2FA 0%,  #FFCDBD 100%);
+	background: linear-gradient(0deg, #D9E2FA 0%,  #5A5EA6 100%);
 	border-radius: 0px 90px 0px 0px;
 }
 
@@ -21,7 +21,7 @@
 	position: fixed;
 	right: 0;
 	top: 0;
-	background: linear-gradient(0deg, #FFCDBD 0%,  #D9E2FA 100%);
+	background: linear-gradient(0deg, #5A5EA6 0%,  #D9E2FA 100%);
 	border-radius: 0px 0px 0px 90px;
 }
 
@@ -40,7 +40,7 @@ body{
 	font-family: Lexend;
 	display: flex;
 	flex-direction: column;
-	color: #545760;
+	color: ##31324D;
 	margin: 0;
 	overscroll-behavior: contain;
 }
@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
 
 a{
 	text-decoration: underline;
-	color: #6E5750;
+	color: #31324D;
 }
 
 /*
@@ -92,13 +92,13 @@ a{
 
 
 .switchTopic .selected{
-	background-color: #FFCDBD;
-	color: #6E5750;
+	background-color: #5A5EA6;
+	color: #D9E2FA;
 }
 
 .switchTopic .topic:hover{
-	background-color: #FFCDBD;
-	color: #6E5750;
+	background-color: #5A5EA6;
+	color: #D9E2FA;
 	cursor: pointer; 
 }
 
@@ -106,14 +106,14 @@ a{
 	font-weight: bold;
 	margin-top: 21px;
 	font-size: 32px;
-	color: #6E5750;
+	color: #31324D;
 }
 
 .infocard .daticontainer .dati{
 	margin-top: 6px;
 	font-size: 16px;
 	font-weight: regular;
-	color: #545760;
+	color: #31324D;
 }
 
 .infocard .image img{
@@ -148,8 +148,8 @@ a{
 	margin-top: 14px;
 	border-radius: 23px;
 	border: none;
-	background-color: #FFCDBD;
-	color: #6E5750;
+	background-color: #5A5EA6;
+	color: #D9E2FA;
 	font-weight: bold;
 	font-size: 14px;
 	font-family: Lexend;
@@ -218,7 +218,7 @@ a{
 		position: fixed;
 		left: 0;
 		bottom: 0;
-		background: linear-gradient(0deg, #D9E2FA 0%,  #FFCDBD 100%);
+		background: linear-gradient(0deg, #D9E2FA 0%,  #5A5EA6 100%);
 		border-radius: 0px 90px 0px 0px;
 	}
 
@@ -228,7 +228,7 @@ a{
 		position: fixed;
 		right: 0;
 		top: 0;
-		background: linear-gradient(0deg, #FFCDBD 0%,  #D9E2FA 100%);
+		background: linear-gradient(0deg, #5A5EA6 0%,  #D9E2FA 100%);
 		border-radius: 0px 0px 0px 90px;
 	}
 
@@ -239,7 +239,7 @@ a{
 		margin-left: 25px;
 		margin-right: 25px;
 		/*margin-top: 75px;*/
-		color: #545760;
+		color: ##31324D;
 		overflow-y: scroll;
 		scroll-snap-type: y proximity;
 		padding-bottom: 30vh;
@@ -418,12 +418,12 @@ a{
 	font-weight: bold;
 	margin-bottom: 12px;
 	font-size: 32px;
-	color: #6E5750;
+	color: #31324D;
 }
 
 .sectioncontainer .section .expcontainer{
 	flex-grow: 1;
-	background-color: #FFFAF8;
+	background-color: #D9E2FA;
 	border-radius: 23px;
 	padding-left: 28px;
 	padding-right: 28px;
@@ -439,8 +439,8 @@ a{
 	padding: 14px;
 	border-radius: 23px;
 	border: none;
-	background-color: #FFCDBD;
-	color: #6E5750;
+	background-color: #5A5EA6;
+	color: #31324D;
 	font-weight: bold;
 	font-size: 14px;
 	font-family: Lexend;
@@ -454,7 +454,7 @@ a{
 	width: 14px;
 	height: 14px;
 	color: white;
-	fill: #6E5750;
+	fill: #31324D;
 	margin-left: 14px;
 }
 
@@ -528,14 +528,14 @@ a{
 	font-weight: bold;
 	margin-bottom: 30px;
 	font-size: 32px;
-	color: #6E5750;
+	color: #31324D;
 }
 
 .overlayExpContainer .experience .containerExpJson .subtitle{
 	font-weight: 600;
 	margin-bottom: 12px;
 	font-size: 20px;
-	color: #6E5750;
+	color: #31324D;
 }
 
 .overlayExpContainer .experience .containerExpJson .text{
@@ -580,8 +580,8 @@ a{
 	padding: 14px;
 	border-radius: 23px;
 	border: none;
-	background-color: #FFCDBD;
-	color: #6E5750;
+	background-color: #5A5EA6;
+	color: #31324D;
 }
 
 .overlayExpContainer .experience .containerExpJson{
